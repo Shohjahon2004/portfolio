@@ -1,0 +1,83 @@
+@import '@/assets/styles/settings/common.scss';
+
+.logo{
+        font-weight: 700;
+        font-size: 30px;
+        color: #fff;
+        line-height: 110%;
+}
+.nav{
+    background: #282828;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    border-bottom:1px solid rgba(255, 255, 255, 0.50);
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        
+        &-list{
+            cursor: pointer;
+            display: flex;
+            gap: 80px;
+            height: 100%;
+            @include media(800) {
+                gap: 20px;
+            }
+            @include media(630) {
+                padding-top: 15px;
+            }
+           
+            
+            &-link{
+                color: rgba(96, 205, 196, 0.849);
+                font-size: 18px;                
+                font-weight: 700;      
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;         
+                position: relative;
+                &:hover{
+                    transition: all 500ms;
+                    color: #fff;
+                }
+                &.router-link-active{
+                    color: #a9b821;
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 15px;
+                        height: 15px;
+                        background: #8b8396;
+                        position: absolute;
+                        bottom: 10px;
+                        border-radius: 50%;
+                        transition: all 400ms;
+                        @include media(630) {
+                            transform: translateY(35px);
+                        }
+                    }
+                    }
+                }
+            }
+        }
+    }
+    .nav{
+        &__box{
+        @include media(630) {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding-top: 5px;
+        }
+        @include media(334) {
+            flex-direction: column;
+            align-items: center;
+            gap: 1px;
+            padding-top: 5px;
+        }
+    }
+    }
+                

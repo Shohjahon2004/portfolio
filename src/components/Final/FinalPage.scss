@@ -1,0 +1,93 @@
+.final__box{
+background: url(../../assets/images/bg2.jpg) no-repeat center/cover;
+height: 100vh;
+background-attachment: fixed;
+object-fit: cover;
+    &-tex-center{
+        padding-top: 150px;
+        color: rgb(245, 243, 242);
+        width: 100%;
+        gap: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-bottom: 50px;
+        position: relative;
+        
+        &-title{
+            font-size: 4em;
+            font-weight: 800;
+            @media(max-width:420px){
+                font-size: 30px;
+            }
+            &::after{
+                content: '';
+                display: block;
+                margin-left: 75px;
+                height: 2px;
+                background: #119649;
+                position: absolute;
+                bottom: 50px;
+                width:250px;
+                @media(max-width:420px){
+                    margin-left: 15px;
+                    bottom: 100px;
+                    width: 180px;
+                }
+            }
+        }
+        &-text{
+            font-size: 30px;
+            
+        }
+    }
+    &-content{
+        display: flex;
+        justify-content:space-between;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        &-item{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            &-form{
+                width: 100%;
+                margin-bottom: 10px;
+                background: rgba(170, 166, 215, 0.3);
+                outline: none;
+                padding: 10px;
+                font-size: 16px;
+                color: #fff;
+                text-shadow: 1px 1px 1px rgba(210, 13, 13, 0.3);
+                border: 1px solid rgba(0, 0, 0, 0.3);
+                border-radius: 4px;
+                box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2);
+                &-message{
+                    grid-column: span ;
+                    grid-row: span 2;
+                }
+            }
+           &-socials{
+            padding: 30px;
+            border-radius: 40px;
+            border-bottom: 3px solid rgb(150,93,189);
+            border-top: 3px solid rgb(150,93,189);
+            background: rgba(206,145,247,.397);
+            &-footer{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            }
+           
+            }
+        }
+    }
+
+}
+.final__box-content-socials-img{
+    width: 100px;
+}
